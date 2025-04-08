@@ -1,0 +1,14 @@
+{
+    "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+    "schematics": {
+        "clean-arch": {
+            "description": "An Angular schematic for generating Clean Architecture components.",
+            "factory": "./clean-arch/index#cleanArch"
+        },
+        "entity": {
+            "description": "Creates an Entity class inside of a feature in the domain layer",
+            "factory": "./clean-arch/entity/index#entity",
+            "schema": "./clean-arch/entity/schema.json"
+        }
+    }
+}
