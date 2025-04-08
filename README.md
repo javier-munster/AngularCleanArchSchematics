@@ -1,35 +1,21 @@
 # Clean Architecture Schematics
 
-Schematics for scaffolding Clean Architecture components
+Schematics for scaffolding Clean Architecture components. Component names use PascalCase and features use camelCase.
 
 ## Installation
 1. `npm run build`
 2. `npm link`
 
-## OLD STUFF:
-This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
+## Scaffolding
+`schematics clean-arch:<component> --name=<name> --feature=<feature>`
 
-### Testing
+## Components
+Supported components
+- Entity
 
-To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
-
-Check the documentation with
-
-```bash
-schematics --help
-```
-
-### Unit Testing
-
-`npm run test` will run the unit tests, using Jasmine as a runner and test framework.
-
-### Publishing
-
-To publish, simply do:
-
-```bash
-npm run build
-npm publish
-```
-
-That's it!
+TODO:
+- Use Cases
+- Repository (Interface and Implementation)
+- Component
+- Data Transfer Object
+- Remote Objects
