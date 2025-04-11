@@ -1,0 +1,8 @@
+import { <%= name %>UseCase } from './<%= name %>.UseCase';
+
+describe('<%= name %>UseCase', () => {
+    it('should create an instance', () => {
+        const useCase = new <%= name %>UseCase();
+        expect(useCase).toBeTruthy();
+    });
+});

@@ -1,0 +1,8 @@
+import { <%= name %>Impl } from './<%= name %>.Impl';
+
+describe('<%= name %>Impl', () => {
+    it('should create an instance', () => {
+        const impl = new <%= name %>Impl();
+        expect(impl).toBeTruthy();
+    });
+});

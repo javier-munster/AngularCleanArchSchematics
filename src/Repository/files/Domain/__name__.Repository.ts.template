@@ -1,0 +1,6 @@
+import { InjectionToken } from "@angular/core";
+
+export const <%= name.toUpperCase() %>_REPOSITORY_TOKEN = new InjectionToken<<%= name %>Repository>('<%= name %>RepositoryToken');
+
+export interface <%= name %>Repository {
+}

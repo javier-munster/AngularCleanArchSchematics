@@ -5,8 +5,6 @@ import {
     mergeWith,
     move,
     Rule,
-    // SchematicContext,
-    // Tree,
     url,
 } from '@angular-devkit/schematics';
 import { normalize, strings } from '@angular-devkit/core';
@@ -18,20 +16,19 @@ interface EntityOptions {
 }
 
 export function entity(options: EntityOptions): Rule {
-    const { name, feature, flat = true } = options;
+    const opts = {
+        name: strings.classify(options.name),
+        feature: strings.classify(options.feature),
+        flat: options.flat ?? false,
+    }
 
-    const camelizedFeature = strings.camelize(feature);
-    const classifiedName = strings.classify(name);
-    const folder = flat ? '' : `/${classifiedName}`;
-
-    const targetPath = normalize(
-        `src/app/${camelizedFeature}/domain/entities${folder}`
-    );
+    const folder = opts.flat ? '' : `/${opts.name}`;
+    const targetPath = normalize(`src/app/${opts.feature}/Domain/Entities${folder}`);
 
     const templateSource = apply(url('./files'), [
         applyTemplates({
             ...strings,
-            ...options,
+            ...opts,
         }),
         move(targetPath),
     ]);

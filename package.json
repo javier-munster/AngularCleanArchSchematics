@@ -1,25 +1,27 @@
 {
-  "name": "clean-arch",
-  "version": "0.0.0",
-  "description": "A blank schematics",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine src/**/*_spec.js"
-  },
-  "keywords": [
-    "schematics"
-  ],
-  "author": "",
-  "license": "MIT",
-  "schematics": "./src/collection.json",
-  "dependencies": {
-    "@angular-devkit/core": "^19.2.6",
-    "@angular-devkit/schematics": "^19.2.6",
-    "typescript": "~5.7.2"
-  },
-  "devDependencies": {
-    "@types/node": "^18.18.0",
-    "@types/jasmine": "~5.1.0",
-    "jasmine": "^5.0.0"
-  }
+    "name": "clean-arch",
+    "version": "0.0.0",
+    "description": "A blank schematics",
+    "scripts": {
+        "build": "tsc -p tsconfig.json && node postBuildScript.js",
+        "test": "npm run build && jasmine src/**/*_spec.js"
+    },
+    "keywords": [
+        "schematics"
+    ],
+    "author": "",
+    "license": "MIT",
+    "schematics": "./dist/collection.json",
+    "dependencies": {
+        "@angular-devkit/core": "^19.2.6",
+        "@angular-devkit/schematics": "^19.2.6",
+        "typescript": "~5.7.2"
+    },
+    "devDependencies": {
+        "@types/jasmine": "~5.1.0",
+        "@types/node": "^18.18.0",
+        "fs-extra": "^11.3.0",
+        "glob": "^11.0.1",
+        "jasmine": "^5.0.0"
+    }
 }

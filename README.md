@@ -1,6 +1,7 @@
-# Clean Architecture Schematics
+# Clean Architecture Schematics for Angular
 
-Schematics for scaffolding Clean Architecture components. Component names use PascalCase and features use camelCase.
+Opinionated schematics for scaffolding Clean Architecture components.
+- All components and features use PascalCase
 
 ## Installation
 1. `npm run build`
@@ -12,10 +13,10 @@ Schematics for scaffolding Clean Architecture components. Component names use Pa
 ## Components
 Supported components
 - Entity
-
-TODO:
 - Use Cases
 - Repository (Interface and Implementation)
+
+TODO:
 - Component
 - Data Transfer Object
 - Remote Objects

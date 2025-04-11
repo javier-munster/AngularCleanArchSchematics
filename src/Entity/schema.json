@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "id": "Entity",
+    "$id": "Entity",
     "title": "Entity Options",
     "type": "object",
     "properties": {
@@ -15,7 +15,7 @@
         "flat": {
             "type": "boolean",
             "description": "Flag to create the entity in its own directory",
-            "default": true
+            "default": false
         }
     },
     "required": ["name", "feature"]

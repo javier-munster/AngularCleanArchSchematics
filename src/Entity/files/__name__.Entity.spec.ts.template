@@ -1,0 +1,8 @@
+import { <%= name %>Entity } from './<%= name %>.Entity';
+
+describe('<%= name %>Entity', () => {
+    it('should create an instance', () => {
+        const entity = new <%= name %>Entity();
+        expect(entity).toBeTruthy();
+    });
+});

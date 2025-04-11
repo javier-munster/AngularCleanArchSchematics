@@ -1,0 +1,9 @@
+import { Injectable } from '@angular/core';
+import { <%= name %>Repository } from '../../../Domain/Repositories/<%= name %>.Repository'
+
+@Injectable({
+    providedIn: 'root'
+})
+export class <%= name %>Impl implements <%= name %>Repository {
+    constructor() {}
+}

@@ -6,9 +6,19 @@
             "factory": "./clean-arch/index#cleanArch"
         },
         "entity": {
-            "description": "Creates an Entity class inside of a feature in the domain layer",
-            "factory": "./clean-arch/entity/index#entity",
-            "schema": "./clean-arch/entity/schema.json"
+            "description": "Creates an Entity inside of a feature in the domain layer",
+            "factory": "./Entity/index#entity",
+            "schema": "./Entity/schema.json"
+        },
+        "usecase": {
+            "description": "Creates a UseCase inside of a feature in the domain layer",
+            "factory": "./UseCase/index#useCase",
+            "schema": "./UseCase/schema.json"
+        },
+        "repository": {
+            "description": "Creates a Repository Interface and Implementation (domain and data layers)",
+            "factory": "./Repository/index#repository",
+            "schema": "./Repository/schema.json"
         }
     }
 }

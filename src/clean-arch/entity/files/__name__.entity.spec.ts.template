@@ -1,8 +1,0 @@
-import { <%= classify(name) %>Entity } from './<%= classify(name) %>.entity';
-
-describe('<%= classify(name) %>Entity', () => {
-    it('should create an instance', () => {
-        const entity = new <%= classify(name) %>Entity();
-        expect(entity).toBeTruthy();
-    });
-});
