@@ -1,20 +1,20 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "$id": "Repository",
-    "title": "Repository Options",
+    "$id": "DTO",
+    "title": "Data Transfer Object Options",
     "type": "object",
     "properties": {
         "name": {
             "type": "string",
-            "description": "The name of the entity"
+            "description": "The name of the DTO"
         },
         "feature": {
             "type": "string",
-            "description": "The name of the feature this entity belongs to"
+            "description": "The name of the feature this DTO belongs to"
         },
         "flat": {
             "type": "boolean",
-            "description": "Does not create a separate directory for the Repository if true",
+            "description": "Does not create a separate directory for the DTO if true",
             "default": false
         }
     },

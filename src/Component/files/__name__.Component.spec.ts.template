@@ -1,0 +1,8 @@
+import { <%= name %>Component } from './<%= name %>.Component';
+
+describe('<%= name %>Component', () => {
+    it('should create an instance', () => {
+        const component = new <%= name %>Component();
+        expect(component).toBeTruthy();
+    });
+});

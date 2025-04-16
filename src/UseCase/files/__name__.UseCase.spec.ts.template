@@ -1,8 +1,25 @@
+import { TestBed } from '@angular/core/testing';
 import { <%= name %>UseCase } from './<%= name %>.UseCase';
 
+export class Mock<%= name %>UseCase {}
+
 describe('<%= name %>UseCase', () => {
+    let useCase: <%= name %>UseCase;
+
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            providers: [
+                {
+                    provide: <%= name %>UseCase,
+                    useClass: <%= name %>UseCase
+                },
+            ]
+        });
+
+        useCase = TestBed.inject(<%= name %>UseCase);
+    });
+
     it('should create an instance', () => {
-        const useCase = new <%= name %>UseCase();
         expect(useCase).toBeTruthy();
     });
 });

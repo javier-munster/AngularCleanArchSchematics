@@ -1,24 +1,40 @@
 {
     "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
     "schematics": {
-        "clean-arch": {
-            "description": "An Angular schematic for generating Clean Architecture components.",
-            "factory": "./clean-arch/index#cleanArch"
+        "component": {
+            "description": "Creates a Component inside of a feature in the presentation layer",
+            "factory": "./Component/index#component",
+            "schema": "./Component/schema.json"
+        },
+        "conversion": {
+            "description": "Creates a Conversion inside of a feature in the data layer",
+            "factory": "./Conversion/index#conversion",
+            "schema": "./Conversion/schema.json"
+        },
+        "dto": {
+            "description": "Creates a Data Transfer Object inside of a feature in the data layer",
+            "factory": "./DTO/index#dataTransferObject",
+            "schema": "./DTO/schema.json"
+        },
+        "datasource": {
+            "description": "Creates a DataSource inside of a feature in the data layer",
+            "factory": "./DataSource/index#dataSource",
+            "schema": "./DataSource/schema.json"
         },
         "entity": {
             "description": "Creates an Entity inside of a feature in the domain layer",
             "factory": "./Entity/index#entity",
             "schema": "./Entity/schema.json"
         },
-        "usecase": {
-            "description": "Creates a UseCase inside of a feature in the domain layer",
-            "factory": "./UseCase/index#useCase",
-            "schema": "./UseCase/schema.json"
-        },
         "repository": {
             "description": "Creates a Repository Interface and Implementation (domain and data layers)",
             "factory": "./Repository/index#repository",
             "schema": "./Repository/schema.json"
+        },
+        "usecase": {
+            "description": "Creates a UseCase inside of a feature in the domain layer",
+            "factory": "./UseCase/index#useCase",
+            "schema": "./UseCase/schema.json"
         }
     }
 }

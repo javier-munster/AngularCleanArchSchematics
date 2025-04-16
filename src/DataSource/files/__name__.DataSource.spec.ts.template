@@ -1,0 +1,10 @@
+import { <%= name %>DataSource } from './<%= name %>.DataSource';
+
+export class Mock<%= name %>DataSource {}
+
+describe('<%= name %>DataSource', () => {
+    it('should create an instance', () => {
+        const dataSource = new <%= name %>DataSource();
+        expect(dataSource).toBeTruthy();
+    });
+});

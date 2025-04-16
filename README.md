@@ -15,8 +15,6 @@ Supported components
 - Entity
 - Use Cases
 - Repository (Interface and Implementation)
-
-TODO:
-- Component
+- Component (Like the ng Component, but consistent with the naming of the other components)
 - Data Transfer Object
 - Remote Objects

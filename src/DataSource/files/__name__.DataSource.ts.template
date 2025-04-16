@@ -3,10 +3,6 @@ import { Injectable } from '@angular/core';
 @Injectable({
     providedIn: 'root'
 })
-export class <%= name %>UseCase {
+export class <%= name %>DataSource {
     constructor() {}
-
-    public <%= camelize(name) %>UseCase(): void {
-
-    }
 }
