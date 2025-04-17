@@ -22,7 +22,7 @@ export function dataSource(options: DataSourceOptions): Rule {
         flat: options.flat ?? false,
     }
 
-    const folder = opts.flat ? '' : `/${opts.name}`;
+    const folder = opts.flat ? '' : `/${opts.name}DataSource`;
     const templateSource = apply(url('./files'), [
         applyTemplates({
             ...strings,

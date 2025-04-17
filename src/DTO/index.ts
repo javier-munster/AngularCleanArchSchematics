@@ -22,7 +22,7 @@ export function dataTransferObject(options: DataTransferObjectOptions): Rule {
         flat: options.flat ?? false,
     }
 
-    const folder = opts.flat ? '' : `/${opts.name}`;
+    const folder = opts.flat ? '' : `/${opts.name}DTO`;
     const targetPath = normalize(`src/app/${opts.feature}/Data/DTO${folder}`);
 
     const templateSource = apply(url('./files'), [

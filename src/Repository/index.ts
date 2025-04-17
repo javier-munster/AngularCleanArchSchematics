@@ -22,7 +22,7 @@ export function repository(options: UseCaseOptions): Rule {
         flat: options.flat ?? false,
     }
 
-    const folder = opts.flat ? '' : `/${opts.name}`;
+    const folder = opts.flat ? '' : `/${opts.name}Impl`;
     const domainPath = normalize(`src/app/${opts.feature}/Domain/Repositories`);
     const implPath = normalize(`src/app/${opts.feature}/Data/Implementations${folder}`);
 

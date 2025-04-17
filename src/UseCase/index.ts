@@ -22,7 +22,7 @@ export function useCase(options: UseCaseOptions): Rule {
         flat: options.flat ?? false,
     }
 
-    const folder = opts.flat ? '' : `/${opts.name}`;
+    const folder = opts.flat ? '' : `/${opts.name}UseCase`;
     const templateSource = apply(url('./files'), [
         applyTemplates({
             ...strings,

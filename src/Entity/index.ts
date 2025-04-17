@@ -22,7 +22,7 @@ export function entity(options: EntityOptions): Rule {
         flat: options.flat ?? false,
     }
 
-    const folder = opts.flat ? '' : `/${opts.name}`;
+    const folder = opts.flat ? '' : `/${opts.name}Entity`;
     const targetPath = normalize(`src/app/${opts.feature}/Domain/Entities${folder}`);
 
     const templateSource = apply(url('./files'), [
