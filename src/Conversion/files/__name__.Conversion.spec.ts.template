@@ -1,13 +1,13 @@
-import { toDTO, toEntity } from './<%= name %>.Conversion';
+import { <%= name %>Conversion } from './<%= name %>.Conversion';
 
 describe('<%= name %>Conversion', () => {
     it('should create a DTO', () => {
         // This generated testcase will fail!
-        expect(toDTO() instanceof DTO).toBeTrue();
+        expect(<%= name %>.toDTO() instanceof DTO).toBeTrue();
     });
 
     it('should create an Entity', () => {
         // This generated testcase will fail!
-        expect(toEntity() instanceof Entity).toBeTrue();
+        expect(<%= name %>.toEntity() instanceof Entity).toBeTrue();
     });
 });

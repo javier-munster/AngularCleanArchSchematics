@@ -1,7 +1,9 @@
-export function toDTO() {
+export class <%= name %>Conversion {
+    public static function toDTO() {
 
-}
+    }
 
-export function toEntity() {
+    public static function toEntity() {
 
+    }
 }
