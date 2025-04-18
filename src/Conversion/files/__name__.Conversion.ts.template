@@ -1,9 +1,9 @@
 export class <%= name %>Conversion {
-    public static function toDTO() {
+    public static toDTO() {
 
     }
 
-    public static function toEntity() {
+    public static toEntity() {
 
     }
 }
