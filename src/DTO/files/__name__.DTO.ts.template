@@ -7,6 +7,6 @@ type <%= name %>Success = {
 };
 
 type <%= name %>Error = {
-    type: 'ERROR'
+    type: '<%= underscore(name).toUpperCase() %>_ERROR'
 };
 
