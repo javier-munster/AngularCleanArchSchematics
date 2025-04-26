@@ -1,12 +1,12 @@
 import { Result<%= async %> } from "neverthrow"
 
-export type <%= name %>Entity = Result<%= async %><<%= name %>Success, <%= name %>Error>
+export type <%= name %>Entity = Result<%= async %><<%= name %>EntitySuccess, <%= name %>EntityError>
 
-type <%= name %>Success = {
+type <%= name %>EntitySuccess = {
 
 };
 
-type <%= name %>Error = {
+export type <%= name %>EntityError = {
     type: '<%= underscore(name).toUpperCase() %>_ERROR'
 };
 
