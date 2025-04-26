@@ -20,7 +20,7 @@ export function dataSource(options: DataSourceOptions): Rule {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
         flat: options.flat ?? false,
-    }
+    };
 
     const folder = opts.flat ? '' : `/${opts.name}DataSource`;
     const templateSource = apply(url('./files'), [

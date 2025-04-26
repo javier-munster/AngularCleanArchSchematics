@@ -12,18 +12,17 @@ import { normalize, strings } from '@angular-devkit/core';
 interface DataTransferObjectOptions {
     name: string;
     feature: string;
-    flat?: boolean;
+    isAsync: boolean;
 }
 
 export function dataTransferObject(options: DataTransferObjectOptions): Rule {
     const opts = {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
-        flat: options.flat ?? false,
-    }
+        async: (options.isAsync ?? true) ? 'Async' : '',
+    };
 
-    const folder = opts.flat ? '' : `/${opts.name}DTO`;
-    const targetPath = normalize(`src/app/${opts.feature}/Data/DTO${folder}`);
+    const targetPath = normalize(`src/app/${opts.feature}/Data/DTO`);
 
     const templateSource = apply(url('./files'), [
         applyTemplates({

@@ -1,8 +1,0 @@
-import { <%= name %>DTO } from './<%= name %>.DTO';
-
-describe('<%= name %>DTO', () => {
-    it('should create an instance', () => {
-        const dto = new <%= name %>DTO();
-        expect(dto).toBeTruthy();
-    });
-});

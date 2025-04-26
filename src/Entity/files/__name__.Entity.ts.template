@@ -1,3 +1,12 @@
-export class <%= name %>Entity {
-    constructor() {}
-}
+import { Result<%= async %> } from "neverthrow"
+
+export type <%= name %>Entity = Result<%= async %><<%= name %>Success, <%= name %>Error>
+
+type <%= name %>Success = {
+
+};
+
+type <%= name %>Error = {
+    type: 'ERROR'
+};
+

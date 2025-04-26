@@ -20,7 +20,7 @@ export function repository(options: UseCaseOptions): Rule {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
         flat: options.flat ?? false,
-    }
+    };
 
     const folder = opts.flat ? '' : `/${opts.name}Impl`;
     const domainPath = normalize(`src/app/${opts.feature}/Domain/Repositories`);

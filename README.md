@@ -3,6 +3,9 @@
 Opinionated schematics for scaffolding Clean Architecture components.
 - All components and features use PascalCase
 
+## Dependencies
+- [NeverThrow](https://github.com/supermacro/neverthrow)
+
 ## Installation
 1. `npm run build`
 2. `npm link`

@@ -12,10 +12,10 @@
             "type": "string",
             "description": "The name of the feature this Entity belongs to"
         },
-        "flat": {
+        "isAsync": {
             "type": "boolean",
-            "description": "Does not create a separate directory for the Entity if true",
-            "default": false
+            "description": "If the return type is async",
+            "default": true
         }
     },
     "required": ["name", "feature"]

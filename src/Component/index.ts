@@ -21,7 +21,7 @@ export function component(options: ComponentOptions): Rule {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
         style: options.style ?? 'scss'
-    }
+    };
 
     const targetPath = normalize(`src/app/${opts.feature}/Presentation/${opts.name}Component`);
 

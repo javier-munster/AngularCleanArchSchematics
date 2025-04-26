@@ -20,7 +20,7 @@ export function useCase(options: UseCaseOptions): Rule {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
         flat: options.flat ?? false,
-    }
+    };
 
     const folder = opts.flat ? '' : `/${opts.name}UseCase`;
     const templateSource = apply(url('./files'), [

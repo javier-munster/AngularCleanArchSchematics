@@ -20,7 +20,7 @@ export function conversion(options: ConversionOptions): Rule {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
         flat: options.flat ?? false,
-    }
+    };
 
     const folder = opts.flat ? '' : `/${opts.name}Conversion`;
     const targetPath = normalize(`src/app/${opts.feature}/Data/Implementations/Conversions${folder}`);
