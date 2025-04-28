@@ -26,6 +26,11 @@
             "factory": "./Entity/index#entity",
             "schema": "./Entity/schema.json"
         },
+        "error": {
+            "description": "Creates a new file to store Error types",
+            "factory": "./Error/index#error",
+            "schema": "./Error/schema.json"
+        },
         "repository": {
             "description": "Creates a Repository Interface and Implementation (domain and data layers)",
             "factory": "./Repository/index#repository",

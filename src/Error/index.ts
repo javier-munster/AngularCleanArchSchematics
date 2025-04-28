@@ -9,18 +9,18 @@ import {
 } from '@angular-devkit/schematics';
 import { normalize, strings } from '@angular-devkit/core';
 
-interface EntityOptions {
+interface ErrorOptions {
     name: string;
     feature: string;
 }
 
-export function entity(options: EntityOptions): Rule {
+export function error(options: ErrorOptions): Rule {
     const opts = {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
     };
 
-    const targetPath = normalize(`src/app/${opts.feature}/Domain/Entities`);
+    const targetPath = normalize(`src/app/${opts.feature}/Errors`);
 
     const templateSource = apply(url('./files'), [
         applyTemplates({

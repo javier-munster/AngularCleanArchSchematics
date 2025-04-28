@@ -12,14 +12,12 @@ import { normalize, strings } from '@angular-devkit/core';
 interface DataTransferObjectOptions {
     name: string;
     feature: string;
-    isAsync: boolean;
 }
 
 export function dataTransferObject(options: DataTransferObjectOptions): Rule {
     const opts = {
         name: strings.classify(options.name),
         feature: strings.classify(options.feature),
-        async: (options.isAsync ?? true) ? 'Async' : '',
     };
 
     const targetPath = normalize(`src/app/${opts.feature}/Data/DTO`);

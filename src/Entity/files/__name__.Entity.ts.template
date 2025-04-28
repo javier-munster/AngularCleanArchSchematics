@@ -1,12 +1,6 @@
-import { Result<%= async %> } from "neverthrow"
+import { Effect } from 'effect';
 
-export type <%= name %>Entity = Result<%= async %><<%= name %>EntitySuccess, <%= name %>EntityError>
+export type <%= name %>Entity = Effect.Effect<<%= name %>EntitySuccess, Error>
 
-type <%= name %>EntitySuccess = {
-
-};
-
-export type <%= name %>EntityError = {
-    type: '<%= underscore(name).toUpperCase() %>_ERROR'
-};
+type <%= name %>EntitySuccess = boolean;
 

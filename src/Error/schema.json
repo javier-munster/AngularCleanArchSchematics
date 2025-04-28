@@ -1,16 +1,16 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "$id": "DTO",
-    "title": "Data Transfer Object Options",
+    "$id": "Error",
+    "title": "Error Options",
     "type": "object",
     "properties": {
         "name": {
             "type": "string",
-            "description": "The name of the DTO"
+            "description": "The name of the Error"
         },
         "feature": {
             "type": "string",
-            "description": "The name of the feature this DTO belongs to"
+            "description": "The name of the feature this Error belongs to"
         }
     },
     "required": ["name", "feature"]

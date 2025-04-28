@@ -11,11 +11,6 @@
         "feature": {
             "type": "string",
             "description": "The name of the feature this Entity belongs to"
-        },
-        "isAsync": {
-            "type": "boolean",
-            "description": "If the return type is async",
-            "default": true
         }
     },
     "required": ["name", "feature"]

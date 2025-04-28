@@ -1,12 +1,6 @@
-import { Result<%= async %> } from "neverthrow"
+import { Effect } from 'effect';
 
-export type <%= name %>DTO = Result<%= async %><<%= name %>DTOSuccess, <%= name %>DTOError>
+export type <%= name %>DTO = Effect.Effect<<%= name %>DTOSuccess, Error>
 
-type <%= name %>DTOSuccess = {
-
-};
-
-export type <%= name %>DTOError = {
-    type: '<%= underscore(name).toUpperCase() %>_ERROR'
-};
+export type <%= name %>DTOSuccess = boolean;
 
