@@ -1,9 +1,11 @@
-export class <%= name %>Conversion {
-    public static toDTO() {
+import { Schema } from 'effect';
+import { <%= name %>DTO, <%= name %>DTOSchema } from "../../../DTO/<%= name %>.DTO";
+import { <%= name %>Entity } from "../../../../Domain/Entities/<%= name %>.Entity";
 
-    }
+export function to<%= name %>DTO(entity: <%= name %>Entity): <%= name %>DTO {
+    return entity;
+}
 
-    public static toEntity() {
-
-    }
+export function to<%= name %>Entity(dto: unknown): <%= name %>Entity {
+    return Schema.decodeUnknownSync(<%= name %>DTOSchema)(dto);
 }

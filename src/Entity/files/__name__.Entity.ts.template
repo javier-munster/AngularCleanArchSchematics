@@ -1,6 +1,3 @@
-import { Effect } from 'effect';
+export interface <%= name %>Entity {
 
-export type <%= name %>Entity = Effect.Effect<<%= name %>EntitySuccess, Error>
-
-type <%= name %>EntitySuccess = boolean;
-
+};

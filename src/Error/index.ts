@@ -20,7 +20,7 @@ export function error(options: ErrorOptions): Rule {
         feature: strings.classify(options.feature),
     };
 
-    const targetPath = normalize(`src/app/${opts.feature}/Errors`);
+    const targetPath = normalize(`src/app/common/Errors`);
 
     const templateSource = apply(url('./files'), [
         applyTemplates({
