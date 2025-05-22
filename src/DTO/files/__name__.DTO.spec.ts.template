@@ -1,0 +1,17 @@
+import { Arbitrary, FastCheck, Schema } from "effect";
+import { <%= name %>DTOSchema } from './<%= name %>.DTO';
+
+describe('<%= name %>DTO', () => {
+    it('sanity test', async () => {
+        const arb = Arbitrary.make(<%= name %>DTOSchema);
+        const sampleDTOs= FastCheck.sample(arb, 5);
+
+        for (const dto of sampleDTOs) {
+            console.info("<%= name %>DTO Sanity Check:", JSON.stringify(dto));
+            expect(() => {
+                Schema.decodeUnknownSync(<%= name %>DTOSchema)(dto);
+            }).not.toThrow();
+        }
+    });
+});
+

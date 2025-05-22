@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: '<%= name %>Component',
-  imports: [],
-  templateUrl: './<%= name %>.Component.html',
-  styleUrl: './<%= name %>.Component.<%= style %>'
+    selector: '<%= name %>Component',
+    imports: [],
+    templateUrl: './<%= name %>.Component.html',
+    styleUrl: './<%= name %>.Component.<%= style %>'
 })
 export class <%= name %>Component {
 

@@ -1,6 +1,6 @@
 import { Schema } from 'effect';
-import { <%= name %>DTO, <%= name %>DTOSchema } from "../../../DTO/<%= name %>.DTO";
-import { <%= name %>Entity } from "../../../../Domain/Entities/<%= name %>.Entity";
+import { <%= name %>DTO, <%= name %>DTOSchema } from "../../../DTO/<%= name %>DTO/<%= name %>.DTO";
+import { <%= name %>Entity, <%= name %>EntitySchema } from "../../../../Domain/Entities/<%= name %>Entity/<%= name %>.Entity";
 
 export function to<%= name %>DTO(entity: <%= name %>Entity): <%= name %>DTO {
     return entity;

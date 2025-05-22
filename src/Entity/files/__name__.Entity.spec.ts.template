@@ -1,0 +1,17 @@
+import { Arbitrary, FastCheck, Schema } from "effect";
+import { <%= name %>EntitySchema } from './<%= name %>.Entity';
+
+describe('<%= name %>Entity', () => {
+    it('sanity test', async () => {
+        const arb = Arbitrary.make(<%= name %>EntitySchema);
+        const sampleEntities = FastCheck.sample(arb, 5);
+
+        for (const entity of sampleEntities) {
+            console.info("<%= name %>Entity Sanity Check:", JSON.stringify(entity));
+            expect(() => {
+                Schema.decodeUnknownSync(<%= name %>EntitySchema)(entity);
+            }).not.toThrow();
+        }
+    });
+});
+
