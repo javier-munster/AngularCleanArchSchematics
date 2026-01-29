@@ -1,11 +1,9 @@
 # Clean Architecture Schematics for Angular
 
 Opinionated schematics for scaffolding Clean Architecture components.
-- All components and features use PascalCase
 
 ## Dependencies
-Required on target project:
-- [NeverThrow](https://github.com/supermacro/neverthrow) (for DTOs and Entities)
+- [Effect](https://effect.website/) (for DTOs, Entities and Conversions)
 
 ## Installation
 1. `npm run build`
